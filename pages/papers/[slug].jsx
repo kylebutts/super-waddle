@@ -62,7 +62,7 @@ export default function Post({ paper }) {
             {paper.links != null ? (
               <div className="mt-size-md flex flex-wrap gap-x-size-xs gap-y-size-xs">
                 {paper.links.map((link) => (
-                  <LinkWrapper href={link.url}>{link.name}</LinkWrapper>
+                  <LinkWrapper key={link.name} href={link.url}>{link.name}</LinkWrapper>
                 ))}
               </div>
             ) : null}
