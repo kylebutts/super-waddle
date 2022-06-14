@@ -8,7 +8,6 @@ import { motion } from "framer-motion";
 
 export default function Post({ software }) {
   const MDXContent = useMDXComponent(software.body.code);
-  console.log(software)
 
   return (
     <>

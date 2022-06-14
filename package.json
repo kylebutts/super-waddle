@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export && mv out/ docs/",
-    "gh-pages": "git subtree push --prefix out origin gh-pages",
+    "build": "next build && next export",
+    "gh-pages": "mv out/ docs/",
     "start": "next start",
     "lint": "next lint"
   },
