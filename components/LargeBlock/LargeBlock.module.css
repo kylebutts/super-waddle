@@ -1,0 +1,20 @@
+.large-block {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+.large-block + .large-block {
+  z-index: 10;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-top: -4.375rem;
+  margin-bottom: 4rem;
+}
+
+.dotted-bg {
+  background-image: radial-gradient(
+    var(--dotted-bg-color) 1px,
+    transparent 0
+  );
+  background-position: 50% center;
+  background-size: 18px 18px;
+}

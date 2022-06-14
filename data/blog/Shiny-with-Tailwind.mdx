@@ -1,0 +1,47 @@
+---
+title: 'Shiny with TailwindCSS'
+date: '2022-03-27'
+author:
+  - name: "Kyle Butts"
+    url: https://kylebutts.com
+    affiliation: CU Boulder
+    affiliation_url: 
+description:
+  A guide on how to use TailwindCSS to perform common styling tasks in Shiny applications.
+category: "R"
+display: false
+---
+
+Recently, I released the `{shiny.tailwind}` package which brings [TailwindCSS](https://tailwindcss.com/) classes to Shiny. This post is the first blog in a series of blogs that introduces TailwindCSS and shows how it can be used to quickly and easily design beautiful and responsive shiny applications
+
+<VectorSubset>
+
+</VectorSubset>
+
+
+
+## Spacing items
+
+`gap-x-#` and `gap-y-#`
+
+<FlexExampleGap />
+
+
+
+
+## Dynamic Layout
+
+<FlexExampleGrow />
+
+
+For example, you could set a width on a sidebar and have the main content fill the rest of the window's size.
+
+<LargeBlock flex workshop>
+  <div
+    className={`flex w-full max-w-prose flex-row overflow-hidden rounded-md border-2 border-mine-shaft-200 bg-mine-shaft-50 dark:border-mine-shaft-600 dark:bg-mine-shaft-800`}
+  >
+    <div className="h-[24rem] w-48 bg-mine-shaft-400 text-white px-4 py-4 text-md">Sidebar</div>
+    <div className="h-[24rem] flex-grow bg-white text-mine-shaft-800 px-4 py-4 text-md">Content here</div>
+  </div>
+
+</LargeBlock>

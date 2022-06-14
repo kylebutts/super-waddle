@@ -1,0 +1,153 @@
+/**
+ * MIT License
+ * Rosé Pine Theme
+ * https://github.com/rose-pine
+ * Ported for PrismJS by fvrests [@fvrests]
+ */
+
+:root {
+  --prism-string: #ea9d34;
+  --prism-operator: #b4637a;
+  --prism-plain: #575279;
+  --prism-punctuation: #9893a5;
+  --prism-function: #d7827e;
+  --prism-deleted: #b4637a;
+  --prism-variable: #56949f;
+  --prism-parameter: #907aa9;
+  --prism-bg: #faf4ed;
+  --prism-namespace: #907aa9;
+}
+.dark {
+  --prism-string: #f6c177;
+  --prism-operator: #3e8fb0;
+  --prism-plain: #e0def4;
+  --prism-punctuation: #9893a5;
+  --prism-function: #ea9a97;
+  --prism-deleted: #eb6f92;
+  --prism-variable: #9ccfd8;
+  --prism-parameter: #c4a7e7;
+  --prism-bg: #232136;
+  --prism-namespace: #c4a7e7;
+}
+
+code, pre {
+  font-family: 'Operator Mono', 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+code[class*="language-"],
+pre[class*="language-"],
+.large-block[class*="language-"] {
+	color: var(--prism-plain);
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 2;
+	-o-tab-size: 2;
+	tab-size: 2;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+
+	@media print {
+		text-shadow: none;
+	}
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	overflow: auto;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+
+.token.italic,
+.token.selector,
+.token.doctype,
+.token.attr-name,
+.token.inserted,
+.token.deleted,
+.token.comment,
+.token.prolog,
+.token.cdata,
+.token.constant,
+.token.parameter,
+.token.url,
+.token.function {
+	font-style: italic;
+}
+
+.token.url {
+	text-decoration: underline;
+}
+
+.token.namespace {
+  color: var(--prism-namespace)
+}
+
+/* Syntax highlighting */
+.token.constant {
+	color: var(--prism-operator);
+}
+
+.token.comment,
+.token.prolog,
+.token.cdata,
+.token.punctuation {
+	color: var(--prism-punctuation);
+}
+
+.token.delimiter,
+.token.important,
+.token.atrule,
+.token.operator,
+.token.keyword {
+	color: var(--prism-operator);
+}
+
+.token.tag,
+.token.tag .punctuation,
+.token.doctype,
+.token.variable,
+.token.regex,
+.token.class-name,
+.token.selector,
+.token.inserted {
+	color: var(--prism-variable);
+}
+
+.token.boolean,
+.token.entity,
+.token.number,
+.token.symbol,
+.token.function {
+	color: var(--prism-function);
+}
+
+.token.string,
+.token.char,
+.token.property,
+.token.attr-value,
+.token.attr-value .punctuation {
+	color: var(--prism-string);
+}
+
+.token.parameter,
+.token.url,
+.token.name,
+.token.attr-name,
+.token.builtin {
+	color: var(--prism-parameter);
+}
+
+.token.deleted {
+	color: var(--prism-deleted);
+}
